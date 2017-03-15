@@ -1,6 +1,9 @@
 title: Contact
+
+<!----->
 #Contact
 
-This is my contact.
+[LinkedIn](https://www.linkedin.com/in/michael-brockman-a61469115/)
 
-######2017-02-11
+[GitHub](https://github.com/mbrockman1)
+<!----->

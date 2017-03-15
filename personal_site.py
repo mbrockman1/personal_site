@@ -27,10 +27,14 @@ def tag(tag):
 @app.route('/<path>/')
 def page(path):
     list_of_pages = [p for p in pages]
+    print list_of_pages
+    from pprint import pprint
+    pprint (vars(list_of_pages[2]))
     page = pages.get_or_404(path).html
     content = Markup(markdown.markdown(open('./pages/'+ str(path) + ".md", 'r').read()))
+    content = content.split('<!----->')[1]
     return render_template('index.html', content=content, title=str(path).capitalize(),
                            list_of_pages=list_of_pages)
-    
+
 if __name__ == '__main__':
     app.run(debug=True)
